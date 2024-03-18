@@ -10,16 +10,13 @@ import Shimmer from "./Shimmer";
 
 const Body = ()=>{
     const [resList,setResList]= useState([]);
-    const [filteredRes, setFilteredRes]= useState([]);
-    // This useState is used to render the fetched data from api so that our search function can work on every aspect.
-
-
+    const [filteredRes, setFilteredRes]= useState([]); // This useState is used to render the fetched data from api so that our search function can work on every aspect.
     const[search,setSearch]= useState('');
-
-    let filterData = resList.filter((res)=>res.info.avgRating>4)
-    // console.log(filterData)
+   
+    let filterData = filteredRes.filter((res)=>res.info.avgRating>4)
+    console.log("filterdata",filterData)
     
-    useEffect(()=>{
+    useEffect(()=>{  
         fetchData();
     },[])
     const fetchData = async ()=>{
@@ -59,7 +56,7 @@ const Body = ()=>{
                 <button className="btn" onClick={searchFilter}>Search</button>
             </div>
             <div className="filter">
-                <button className="filter-btn" onClick={()=>{setResList(filterData) }}>Find top Restaurants</button>
+                <button className="filter-btn" onClick={()=>{setFilteredRes(filterData) }}>Find top Restaurants</button>
             </div>
             
             <div className="res-container">
