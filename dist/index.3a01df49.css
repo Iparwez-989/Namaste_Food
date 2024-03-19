@@ -95,4 +95,8 @@ body {
 .login-btn {
   padding: 10px 18px;
 }
+
+.nav-items ul li {
+  text-decoration: none;
+}
 /*# sourceMappingURL=index.3a01df49.css.map */
