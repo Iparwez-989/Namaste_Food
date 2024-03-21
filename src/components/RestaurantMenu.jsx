@@ -1,6 +1,6 @@
 import React from "react";
 const RestaurantMenu = ()=>{
-    return(
+    return (
         <div>
             <h1>heyy</h1>
             <h3>Restaurant Menu</h3>
