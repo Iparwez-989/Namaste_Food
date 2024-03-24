@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 // import resObj from "../utils/mockData";
 import RestaurantCard from "./RestaurantCard";
 import Shimmer from "./Shimmer";
+import { Link } from "react-router-dom";
 
 
 
@@ -69,8 +70,16 @@ const Body = ()=>{
 
 {/* Not using keys(Not Acceptable) <<<<<<<<<  index <<<<<<< using unique id (Best Practice )*/}
                 {
-                    filteredRes.map((restaurant)=><RestaurantCard key={restaurant.info.id} resData={restaurant} />)
-
+                    filteredRes.map((restaurant)=>
+                    
+                    <Link 
+                    to={"/restaurant/"+restaurant.info.id} 
+                    key={restaurant.info.id}>
+                    
+                    <RestaurantCard resData={restaurant} />
+                    
+                    </Link>
+                    )
                 }
             </div>
 
