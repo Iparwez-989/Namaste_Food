@@ -93,3 +93,7 @@ body{
     text-decoration: none;
     color: red;
 }
+.user-card{
+    border: 1px solid white;
+    padding: 5px;
+}

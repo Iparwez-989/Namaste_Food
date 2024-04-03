@@ -51,7 +51,7 @@ const Body = ()=>{
     console.log('body rendered')
     return resList.length===0? <Shimmer />: (
         <div className="body">
-
+            
             <div className="search">
                 <input type="text" placeholder="Search your favourite Restaurant" className="searchbar" value={search} onChange={(e)=>{setSearch(e.target.value)}} />
                 <button className="btn" onClick={searchFilter}>Search</button>

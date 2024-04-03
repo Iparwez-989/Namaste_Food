@@ -34520,36 +34520,190 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
-const About = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+var _user = require("./User");
+var _userDefault = parcelHelpers.interopDefault(_user);
+var _userClass = require("./UserClass");
+var _userClassDefault = parcelHelpers.interopDefault(_userClass);
+const About = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
                 children: "This is about page"
             }, void 0, false, {
                 fileName: "src/components/About.jsx",
-                lineNumber: 6,
-                columnNumber: 7
+                lineNumber: 7,
+                columnNumber: 5
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
                 children: "Welcome"
             }, void 0, false, {
                 fileName: "src/components/About.jsx",
-                lineNumber: 7,
-                columnNumber: 7
+                lineNumber: 8,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _userClassDefault.default), {
+                name: "Irfan Parwez",
+                place: "Chittoor{class}"
+            }, void 0, false, {
+                fileName: "src/components/About.jsx",
+                lineNumber: 9,
+                columnNumber: 5
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/About.jsx",
-        lineNumber: 5,
-        columnNumber: 5
+        lineNumber: 6,
+        columnNumber: 3
     }, undefined);
-};
 _c = About;
 exports.default = About;
 var _c;
 $RefreshReg$(_c, "About");
 
   $parcel$ReactRefreshHelpers$42ed.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./User":"enwL1","./UserClass":"aBExQ"}],"enwL1":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$9e44 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$9e44.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _s = $RefreshSig$();
+const User = ()=>{
+    _s();
+    const [count] = (0, _react.useState)(0);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "user-card",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                children: [
+                    "Count: ",
+                    count
+                ]
+            }, void 0, true, {
+                fileName: "src/components/User.jsx",
+                lineNumber: 7,
+                columnNumber: 9
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                children: "Name: Irfan"
+            }, void 0, false, {
+                fileName: "src/components/User.jsx",
+                lineNumber: 8,
+                columnNumber: 9
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                children: "Place: Chittoor"
+            }, void 0, false, {
+                fileName: "src/components/User.jsx",
+                lineNumber: 9,
+                columnNumber: 9
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/User.jsx",
+        lineNumber: 6,
+        columnNumber: 5
+    }, undefined);
+};
+_s(User, "Y89bt/pi8lrdHE1hdS9fijgV/R0=");
+_c = User;
+exports.default = User;
+var _c;
+$RefreshReg$(_c, "User");
+
+  $parcel$ReactRefreshHelpers$9e44.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"aBExQ":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$5f40 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$5f40.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+class UserClass extends (0, _reactDefault.default).Component {
+    constructor(props){
+        super(props);
+        console.log(props);
+        this.state = {
+            count: 1
+        };
+    }
+    render() {
+        const { name, place } = this.props; // Destructuring of objects
+        const { count, count2 } = this.state;
+        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "user-card",
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                    children: [
+                        "Count:",
+                        count
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/UserClass.jsx",
+                    lineNumber: 19,
+                    columnNumber: 13
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                    onClick: ()=>{
+                        this.setState({
+                            count: this.state.count + 1
+                        });
+                    },
+                    children: "Increase"
+                }, void 0, false, {
+                    fileName: "src/components/UserClass.jsx",
+                    lineNumber: 20,
+                    columnNumber: 13
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                    children: [
+                        "Name: ",
+                        name
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/UserClass.jsx",
+                    lineNumber: 25,
+                    columnNumber: 13
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                    children: [
+                        "Place: ",
+                        place
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/UserClass.jsx",
+                    lineNumber: 26,
+                    columnNumber: 13
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "src/components/UserClass.jsx",
+            lineNumber: 18,
+            columnNumber: 9
+        }, this);
+    }
+}
+exports.default = UserClass;
+
+  $parcel$ReactRefreshHelpers$5f40.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;

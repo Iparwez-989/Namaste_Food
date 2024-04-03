@@ -100,4 +100,9 @@ body {
   color: red;
   text-decoration: none;
 }
+
+.user-card {
+  border: 1px solid #fff;
+  padding: 5px;
+}
 /*# sourceMappingURL=index.3a01df49.css.map */
