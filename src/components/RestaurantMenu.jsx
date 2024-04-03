@@ -16,7 +16,7 @@ useEffect(()=>{
         setResMenu(json.data)
         console.log(json)
     }
-
+// Shimmer component will show before the data is fetched
 if (resMenu=== '') return <Shimmer/>
 
 const {itemCards}=resMenu?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card;
