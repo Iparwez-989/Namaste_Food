@@ -34524,40 +34524,58 @@ var _user = require("./User");
 var _userDefault = parcelHelpers.interopDefault(_user);
 var _userClass = require("./UserClass");
 var _userClassDefault = parcelHelpers.interopDefault(_userClass);
-const About = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                children: "This is about page"
-            }, void 0, false, {
+class About extends (0, _reactDefault.default).Component {
+    constructor(props){
+        super(props);
+        console.log("Parent Constructor Called");
+    }
+    componentDidMount() {
+        console.log("Parent component did mount called");
+    }
+    render() {
+        console.log("Parent render function Called");
+        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                        children: "This is about page"
+                    }, void 0, false, {
+                        fileName: "src/components/About.jsx",
+                        lineNumber: 19,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                        children: "Welcome"
+                    }, void 0, false, {
+                        fileName: "src/components/About.jsx",
+                        lineNumber: 20,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _userClassDefault.default), {
+                        name: "Irfan Parwez",
+                        place: "Chittoor{class}"
+                    }, void 0, false, {
+                        fileName: "src/components/About.jsx",
+                        lineNumber: 21,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
                 fileName: "src/components/About.jsx",
-                lineNumber: 7,
-                columnNumber: 5
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                children: "Welcome"
-            }, void 0, false, {
-                fileName: "src/components/About.jsx",
-                lineNumber: 8,
-                columnNumber: 5
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _userClassDefault.default), {
-                name: "Irfan Parwez",
-                place: "Chittoor{class}"
-            }, void 0, false, {
-                fileName: "src/components/About.jsx",
-                lineNumber: 9,
-                columnNumber: 5
-            }, undefined)
-        ]
-    }, void 0, true, {
-        fileName: "src/components/About.jsx",
-        lineNumber: 6,
-        columnNumber: 3
-    }, undefined);
-_c = About;
+                lineNumber: 18,
+                columnNumber: 7
+            }, this)
+        }, void 0, false);
+    }
+}
+// const About = () => (
+//   <div>
+//     <h1>This is about page</h1>
+//     <h3>Welcome</h3> 
+//     <UserClass name={"Irfan Parwez"} place={"Chittoor{class}"} />
+//   </div>
+// )
 exports.default = About;
-var _c;
-$RefreshReg$(_c, "About");
 
   $parcel$ReactRefreshHelpers$42ed.postlude(module);
 } finally {
@@ -34640,14 +34658,19 @@ var _reactDefault = parcelHelpers.interopDefault(_react);
 class UserClass extends (0, _reactDefault.default).Component {
     constructor(props){
         super(props);
-        console.log(props);
+        // console.log(props)
         this.state = {
             count: 1
         };
+        console.log("Child Constructor Rendered");
+    }
+    componentDidMount() {
+        console.log("Child Rendered Component did Mount");
     }
     render() {
         const { name, place } = this.props; // Destructuring of objects
         const { count, count2 } = this.state;
+        console.log("Child rendered Called");
         return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
             className: "user-card",
             children: [
@@ -34658,7 +34681,7 @@ class UserClass extends (0, _reactDefault.default).Component {
                     ]
                 }, void 0, true, {
                     fileName: "src/components/UserClass.jsx",
-                    lineNumber: 19,
+                    lineNumber: 24,
                     columnNumber: 13
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -34670,7 +34693,7 @@ class UserClass extends (0, _reactDefault.default).Component {
                     children: "Increase"
                 }, void 0, false, {
                     fileName: "src/components/UserClass.jsx",
-                    lineNumber: 20,
+                    lineNumber: 25,
                     columnNumber: 13
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
@@ -34680,7 +34703,7 @@ class UserClass extends (0, _reactDefault.default).Component {
                     ]
                 }, void 0, true, {
                     fileName: "src/components/UserClass.jsx",
-                    lineNumber: 25,
+                    lineNumber: 30,
                     columnNumber: 13
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
@@ -34690,13 +34713,13 @@ class UserClass extends (0, _reactDefault.default).Component {
                     ]
                 }, void 0, true, {
                     fileName: "src/components/UserClass.jsx",
-                    lineNumber: 26,
+                    lineNumber: 31,
                     columnNumber: 13
                 }, this)
             ]
         }, void 0, true, {
             fileName: "src/components/UserClass.jsx",
-            lineNumber: 18,
+            lineNumber: 23,
             columnNumber: 9
         }, this);
     }
