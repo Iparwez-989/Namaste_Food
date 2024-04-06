@@ -11,6 +11,9 @@ class About extends React.Component{
   componentDidMount(){
     console.log("Parent component did mount called")
   }
+  componentDidUpdate(){
+    //it'll be called while leaving the page
+  }
   render(){
     console.log("Parent render function Called")
     return (
