@@ -34531,6 +34531,13 @@ class About extends (0, _reactDefault.default).Component {
     }
     componentDidMount() {
         console.log("Parent component did mount called");
+        setInterval(()=>{
+            console.log("hello");
+        }, 1000);
+    }
+    componentDidUpdate() {
+        //it'll be called while leaving the page
+        console.log("Called did update");
     }
     render() {
         console.log("Parent render function Called");
@@ -34541,14 +34548,14 @@ class About extends (0, _reactDefault.default).Component {
                         children: "This is about page"
                     }, void 0, false, {
                         fileName: "src/components/About.jsx",
-                        lineNumber: 19,
+                        lineNumber: 28,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
                         children: "Welcome"
                     }, void 0, false, {
                         fileName: "src/components/About.jsx",
-                        lineNumber: 20,
+                        lineNumber: 29,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _userClassDefault.default), {
@@ -34556,13 +34563,13 @@ class About extends (0, _reactDefault.default).Component {
                         place: "Chittoor{class}"
                     }, void 0, false, {
                         fileName: "src/components/About.jsx",
-                        lineNumber: 21,
+                        lineNumber: 30,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/components/About.jsx",
-                lineNumber: 18,
+                lineNumber: 27,
                 columnNumber: 7
             }, this)
         }, void 0, false);
@@ -34681,7 +34688,7 @@ class UserClass extends (0, _reactDefault.default).Component {
                     ]
                 }, void 0, true, {
                     fileName: "src/components/UserClass.jsx",
-                    lineNumber: 24,
+                    lineNumber: 25,
                     columnNumber: 13
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -34693,7 +34700,7 @@ class UserClass extends (0, _reactDefault.default).Component {
                     children: "Increase"
                 }, void 0, false, {
                     fileName: "src/components/UserClass.jsx",
-                    lineNumber: 25,
+                    lineNumber: 26,
                     columnNumber: 13
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
@@ -34703,7 +34710,7 @@ class UserClass extends (0, _reactDefault.default).Component {
                     ]
                 }, void 0, true, {
                     fileName: "src/components/UserClass.jsx",
-                    lineNumber: 30,
+                    lineNumber: 31,
                     columnNumber: 13
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
@@ -34713,13 +34720,13 @@ class UserClass extends (0, _reactDefault.default).Component {
                     ]
                 }, void 0, true, {
                     fileName: "src/components/UserClass.jsx",
-                    lineNumber: 31,
+                    lineNumber: 32,
                     columnNumber: 13
                 }, this)
             ]
         }, void 0, true, {
             fileName: "src/components/UserClass.jsx",
-            lineNumber: 23,
+            lineNumber: 24,
             columnNumber: 9
         }, this);
     }

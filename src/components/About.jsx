@@ -10,9 +10,15 @@ class About extends React.Component{
   }
   componentDidMount(){
     console.log("Parent component did mount called")
+
+    setInterval(()=>{
+      console.log("hello")
+    },1000)
   }
   componentDidUpdate(){
     //it'll be called while leaving the page
+    console.log("Called did update")
+    
   }
   render(){
     console.log("Parent render function Called")

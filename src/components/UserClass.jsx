@@ -9,8 +9,9 @@ class UserClass extends React.Component{
         }
         console.log("Child Constructor Rendered")
     }
-    componentDidMount(){
+     componentDidMount(){
          console.log("Child Rendered Component did Mount")
+         
     }
     
     
