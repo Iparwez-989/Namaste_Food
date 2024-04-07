@@ -7,18 +7,25 @@ class UserClass extends React.Component{
         this.state={
             count : 1,
         }
-        console.log("Child Constructor Rendered")
+        console.log(this.props.name,"Child Constructor Rendered")
     }
      componentDidMount(){
-         console.log("Child Rendered Component did Mount")
+         console.log(this.props.name,"Child Rendered Component did Mount")
+         this.timer= setInterval(()=>{
+            console.log("Hello")
+         },1000)
          
+    }
+    componentWillUnmount(){
+        console.log("Component will unmount is called")
+        clearInterval(this.timer)
     }
     
     
     render(){       // This render function will return a piece of jsx
         const {name,place} = this.props; // Destructuring of objects
         const {count,count2}= this.state
-        console.log("Child rendered Called")
+        console.log(this.props.name,"Child rendered Called")
         return(
 
         <div className='user-card'>

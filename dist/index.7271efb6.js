@@ -34527,20 +34527,13 @@ var _userClassDefault = parcelHelpers.interopDefault(_userClass);
 class About extends (0, _reactDefault.default).Component {
     constructor(props){
         super(props);
-        console.log("Parent Constructor Called");
+    // console.log("Parent Constructor Called")
     }
     componentDidMount() {
-        console.log("Parent component did mount called");
-        setInterval(()=>{
-            console.log("hello");
-        }, 1000);
-    }
-    componentDidUpdate() {
-        //it'll be called while leaving the page
-        console.log("Called did update");
+    // console.log("Parent component did mount called")
     }
     render() {
-        console.log("Parent render function Called");
+        // console.log("Parent render function Called")
         return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 children: [
@@ -34548,28 +34541,28 @@ class About extends (0, _reactDefault.default).Component {
                         children: "This is about page"
                     }, void 0, false, {
                         fileName: "src/components/About.jsx",
-                        lineNumber: 28,
+                        lineNumber: 20,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
                         children: "Welcome"
                     }, void 0, false, {
                         fileName: "src/components/About.jsx",
-                        lineNumber: 29,
+                        lineNumber: 21,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _userClassDefault.default), {
-                        name: "Irfan Parwez",
+                        name: "User1",
                         place: "Chittoor{class}"
                     }, void 0, false, {
                         fileName: "src/components/About.jsx",
-                        lineNumber: 30,
+                        lineNumber: 22,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/components/About.jsx",
-                lineNumber: 27,
+                lineNumber: 19,
                 columnNumber: 7
             }, this)
         }, void 0, false);
@@ -34604,7 +34597,22 @@ var _reactDefault = parcelHelpers.interopDefault(_react);
 var _s = $RefreshSig$();
 const User = ()=>{
     _s();
-    const [count] = (0, _react.useState)(0);
+    const [count, setCount] = (0, _react.useState)(0);
+    (0, _react.useEffect)(()=>{
+        console.log("useEffect Called");
+        timer = setInterval(()=>{
+            console.log("Hello from useEffect");
+        }, 1000);
+        return ()=>{
+            console.log("UseEffect return");
+            // This return function is same as component will unmount{Class component concept}
+            // This function is called while going to other page
+            //  It can be said as cleaning our mess
+            // If we will not do so it will run continuously in the background and make the page slow
+            clearInterval(timer);
+        };
+    }, []);
+    console.log("render");
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "user-card",
         children: [
@@ -34615,31 +34623,41 @@ const User = ()=>{
                 ]
             }, void 0, true, {
                 fileName: "src/components/User.jsx",
-                lineNumber: 7,
+                lineNumber: 27,
+                columnNumber: 9
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                onClick: ()=>{
+                    setCount(count + 1);
+                },
+                children: "inc"
+            }, void 0, false, {
+                fileName: "src/components/User.jsx",
+                lineNumber: 28,
                 columnNumber: 9
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
                 children: "Name: Irfan"
             }, void 0, false, {
                 fileName: "src/components/User.jsx",
-                lineNumber: 8,
+                lineNumber: 31,
                 columnNumber: 9
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
                 children: "Place: Chittoor"
             }, void 0, false, {
                 fileName: "src/components/User.jsx",
-                lineNumber: 9,
+                lineNumber: 32,
                 columnNumber: 9
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/User.jsx",
-        lineNumber: 6,
+        lineNumber: 26,
         columnNumber: 5
     }, undefined);
 };
-_s(User, "Y89bt/pi8lrdHE1hdS9fijgV/R0=");
+_s(User, "f6rNyXb4nKr8df0VUP2jADfsx6o=");
 _c = User;
 exports.default = User;
 var _c;
@@ -34669,15 +34687,22 @@ class UserClass extends (0, _reactDefault.default).Component {
         this.state = {
             count: 1
         };
-        console.log("Child Constructor Rendered");
+        console.log(this.props.name, "Child Constructor Rendered");
     }
     componentDidMount() {
-        console.log("Child Rendered Component did Mount");
+        console.log(this.props.name, "Child Rendered Component did Mount");
+        this.timer = setInterval(()=>{
+            console.log("Hello");
+        }, 1000);
+    }
+    componentWillUnmount() {
+        console.log("Component will unmount is called");
+        clearInterval(this.timer);
     }
     render() {
         const { name, place } = this.props; // Destructuring of objects
         const { count, count2 } = this.state;
-        console.log("Child rendered Called");
+        console.log(this.props.name, "Child rendered Called");
         return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
             className: "user-card",
             children: [
@@ -34688,7 +34713,7 @@ class UserClass extends (0, _reactDefault.default).Component {
                     ]
                 }, void 0, true, {
                     fileName: "src/components/UserClass.jsx",
-                    lineNumber: 25,
+                    lineNumber: 32,
                     columnNumber: 13
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -34700,7 +34725,7 @@ class UserClass extends (0, _reactDefault.default).Component {
                     children: "Increase"
                 }, void 0, false, {
                     fileName: "src/components/UserClass.jsx",
-                    lineNumber: 26,
+                    lineNumber: 33,
                     columnNumber: 13
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
@@ -34710,7 +34735,7 @@ class UserClass extends (0, _reactDefault.default).Component {
                     ]
                 }, void 0, true, {
                     fileName: "src/components/UserClass.jsx",
-                    lineNumber: 31,
+                    lineNumber: 38,
                     columnNumber: 13
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
@@ -34720,13 +34745,13 @@ class UserClass extends (0, _reactDefault.default).Component {
                     ]
                 }, void 0, true, {
                     fileName: "src/components/UserClass.jsx",
-                    lineNumber: 32,
+                    lineNumber: 39,
                     columnNumber: 13
                 }, this)
             ]
         }, void 0, true, {
             fileName: "src/components/UserClass.jsx",
-            lineNumber: 24,
+            lineNumber: 31,
             columnNumber: 9
         }, this);
     }
