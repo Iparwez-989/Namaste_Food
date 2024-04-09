@@ -3,24 +3,24 @@ const User = ()=>{
     const [count,setCount]= useState(0)
 
 
-    // useEffect(()=>{
-    //     console.log("useEffect Called")
-    //     timer = setInterval(()=>{
-    //         console.log("Hello from useEffect")
+    useEffect(()=>{
+        console.log("useEffect Called")
+        timer = setInterval(()=>{
+            console.log("Hello from useEffect")
 
-    //     },1000)
-    //     return ()=>{
-    //         console.log("UseEffect return")
-    //         // This return function is same as component will unmount{Class component concept}
-    //         // This function is called while going to other page
-    //         //  It can be said as cleaning our mess
-    //         // If we will not do so it will run continuously in the background and make the page slow
+        },1000)
+        return ()=>{
+            console.log("UseEffect return")
+            // This return function is same as component will unmount{Class component concept}
+            // This function is called while going to other page
+            //  It can be said as cleaning our mess
+            // If we will not do so it will run continuously in the background and make the page slow
 
-    //         clearInterval(timer)
-    //     }
+            clearInterval(timer)
+        }
 
-    // },[])
-    // console.log("render")
+    },[])
+    console.log("render")
     
     return (
     <div className='user-card'>
