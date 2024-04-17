@@ -15,7 +15,7 @@ const Body = ()=>{
     const[search,setSearch]= useState('');
    
     let filterData = filteredRes.filter((res)=>res.info.avgRating>4)
-    console.log("filterdata",filterData)
+    // console.log("filterdata",filterData)
     
     useEffect(()=>{  
         fetchData();
@@ -23,7 +23,7 @@ const Body = ()=>{
     const fetchData = async ()=>{
         const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.37240&lng=78.43780&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
         const json = await data.json();
-        console.log(json);
+        // console.log(json);
         setResList(json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants)
         setFilteredRes(json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants)
         
@@ -34,9 +34,9 @@ const Body = ()=>{
        const filteredSearch =  resList.filter(
         (res)=>res.info.name.toLowerCase().includes(search.toLowerCase())
         );
-        console.log(filteredSearch)
+        // console.log(filteredSearch)
         setFilteredRes(filteredSearch)
-        console.log('clicked')
+        // console.log('clicked')
         
     }
     // if (resList.length === 0) {
@@ -48,7 +48,7 @@ const Body = ()=>{
             
     //         </>)
     // }
-    console.log('body rendered')
+    // console.log('body rendered')
     return resList.length===0? <Shimmer />: (
         <div className="body">
             

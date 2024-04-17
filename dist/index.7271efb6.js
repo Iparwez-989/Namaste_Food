@@ -27270,14 +27270,14 @@ const Body = ()=>{
     const [filteredRes, setFilteredRes] = (0, _react.useState)([]); // This useState is used to render the fetched data from api so that our search function can work on every aspect.
     const [search, setSearch] = (0, _react.useState)("");
     let filterData = filteredRes.filter((res)=>res.info.avgRating > 4);
-    console.log("filterdata", filterData);
+    // console.log("filterdata",filterData)
     (0, _react.useEffect)(()=>{
         fetchData();
     }, []);
     const fetchData = async ()=>{
         const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.37240&lng=78.43780&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
         const json = await data.json();
-        console.log(json);
+        // console.log(json);
         setResList(json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants);
         setFilteredRes(json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants);
     };
@@ -27285,9 +27285,9 @@ const Body = ()=>{
         // reslist is the original data coming from api which is used to filter the data according to 
         // search text and it will copy its filtered data to filtered res which will be rendered on the home screen
         const filteredSearch = resList.filter((res)=>res.info.name.toLowerCase().includes(search.toLowerCase()));
-        console.log(filteredSearch);
+        // console.log(filteredSearch)
         setFilteredRes(filteredSearch);
-        console.log("clicked");
+    // console.log('clicked')
     };
     // if (resList.length === 0) {
     //     return(
@@ -27296,7 +27296,7 @@ const Body = ()=>{
     //         <Shimmer />
     //         </>)
     // }
-    console.log("body rendered");
+    // console.log('body rendered')
     return resList.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
         fileName: "src/components/Body.jsx",
         lineNumber: 52,
