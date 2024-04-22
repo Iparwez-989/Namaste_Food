@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { MENU_API } from '../utils/constants'
 import useRestaurantMenu from '../utils/useRestaurantMenu'
 import Shimmer from './Shimmer'
 
 const RestaurantMenu = () => {
     const {resId} = useParams();
-    const resMenu = useRestaurantMenu(resId);
+    const resMenu = useRestaurantMenu(resId); //useRestaurantMenu is the custom hook here
     
     
     
