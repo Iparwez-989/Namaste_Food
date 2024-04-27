@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import RestaurantCard from "./RestaurantCard";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 
 
@@ -13,6 +14,7 @@ const Body = ()=>{
     const [resList,setResList]= useState([]);
     const [filteredRes, setFilteredRes]= useState([]); // This useState is used to render the fetched data from api so that our search function can work on every aspect.
     const[search,setSearch]= useState('');
+    const onlineStatus = useOnlineStatus()
    
     let filterData = filteredRes.filter((res)=>res.info.avgRating>4)
     // console.log("filterdata",filterData)
@@ -49,7 +51,16 @@ const Body = ()=>{
     //         </>)
     // }
     // console.log('body rendered')
-    return resList.length===0? <Shimmer />: (
+    if(onlineStatus === false){
+        return(
+            <div>
+         <center><h1>Oops !! looks like you are not connected to the internet</h1>
+         <h3>Please check your internet connection</h3></center>
+         </div>
+        )
+    }
+    
+    return  resList.length===0? <Shimmer />: (
         <div className="body">
             
             <div className="search">
