@@ -27265,25 +27265,16 @@ var _shimmerDefault = parcelHelpers.interopDefault(_shimmer);
 var _reactRouterDom = require("react-router-dom");
 var _useOnlineStatus = require("../utils/useOnlineStatus");
 var _useOnlineStatusDefault = parcelHelpers.interopDefault(_useOnlineStatus);
+var _useResList = require("../utils/useResList");
+var _useResListDefault = parcelHelpers.interopDefault(_useResList);
 var _s = $RefreshSig$();
 const Body = ()=>{
     _s();
-    const [resList, setResList] = (0, _react.useState)([]);
-    const [filteredRes, setFilteredRes] = (0, _react.useState)([]); // This useState is used to render the fetched data from api so that our search function can work on every aspect.
     const [search, setSearch] = (0, _react.useState)("");
     const onlineStatus = (0, _useOnlineStatusDefault.default)();
+    const [resList, setResList, filteredRes, setFilteredRes] = (0, _useResListDefault.default)();
     let filterData = filteredRes.filter((res)=>res.info.avgRating > 4);
     // console.log("filterdata",filterData)
-    (0, _react.useEffect)(()=>{
-        fetchData();
-    }, []);
-    const fetchData = async ()=>{
-        const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.37240&lng=78.43780&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
-        const json = await data.json();
-        // console.log(json);
-        setResList(json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants);
-        setFilteredRes(json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants);
-    };
     const searchFilter = ()=>{
         // reslist is the original data coming from api which is used to filter the data according to 
         // search text and it will copy its filtered data to filtered res which will be rendered on the home screen
@@ -27307,30 +27298,40 @@ const Body = ()=>{
                     children: "Oops !! looks like you are not connected to the internet"
                 }, void 0, false, {
                     fileName: "src/components/Body.jsx",
-                    lineNumber: 57,
+                    lineNumber: 48,
                     columnNumber: 18
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                    children: "Please check your internet connection"
-                }, void 0, false, {
+                    children: [
+                        "Please check your ",
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
+                            children: " internet connection"
+                        }, void 0, false, {
+                            fileName: "src/components/Body.jsx",
+                            lineNumber: 49,
+                            columnNumber: 32
+                        }, undefined),
+                        " and Try again"
+                    ]
+                }, void 0, true, {
                     fileName: "src/components/Body.jsx",
-                    lineNumber: 58,
+                    lineNumber: 49,
                     columnNumber: 10
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/components/Body.jsx",
-            lineNumber: 57,
+            lineNumber: 48,
             columnNumber: 10
         }, undefined)
     }, void 0, false, {
         fileName: "src/components/Body.jsx",
-        lineNumber: 56,
+        lineNumber: 47,
         columnNumber: 13
     }, undefined);
     return resList.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
         fileName: "src/components/Body.jsx",
-        lineNumber: 63,
+        lineNumber: 54,
         columnNumber: 33
     }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "body",
@@ -27348,7 +27349,7 @@ const Body = ()=>{
                         }
                     }, void 0, false, {
                         fileName: "src/components/Body.jsx",
-                        lineNumber: 67,
+                        lineNumber: 58,
                         columnNumber: 17
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -27357,13 +27358,13 @@ const Body = ()=>{
                         children: "Search"
                     }, void 0, false, {
                         fileName: "src/components/Body.jsx",
-                        lineNumber: 68,
+                        lineNumber: 59,
                         columnNumber: 17
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Body.jsx",
-                lineNumber: 66,
+                lineNumber: 57,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27376,12 +27377,12 @@ const Body = ()=>{
                     children: "Find top Restaurants"
                 }, void 0, false, {
                     fileName: "src/components/Body.jsx",
-                    lineNumber: 71,
+                    lineNumber: 62,
                     columnNumber: 17
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/Body.jsx",
-                lineNumber: 70,
+                lineNumber: 61,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27392,29 +27393,30 @@ const Body = ()=>{
                             resData: restaurant
                         }, void 0, false, {
                             fileName: "src/components/Body.jsx",
-                            lineNumber: 90,
+                            lineNumber: 81,
                             columnNumber: 21
                         }, undefined)
                     }, restaurant.info.id, false, {
                         fileName: "src/components/Body.jsx",
-                        lineNumber: 86,
+                        lineNumber: 77,
                         columnNumber: 21
                     }, undefined))
             }, void 0, false, {
                 fileName: "src/components/Body.jsx",
-                lineNumber: 74,
+                lineNumber: 65,
                 columnNumber: 13
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Body.jsx",
-        lineNumber: 64,
+        lineNumber: 55,
         columnNumber: 9
     }, undefined);
 };
-_s(Body, "fgtreYELYFGcyauNTJQylqU0sBk=", false, function() {
+_s(Body, "7ft89NM080/0vLGWxSM9wZyceLs=", false, function() {
     return [
-        (0, _useOnlineStatusDefault.default)
+        (0, _useOnlineStatusDefault.default),
+        (0, _useResListDefault.default)
     ];
 });
 _c = Body;
@@ -27427,7 +27429,7 @@ $RefreshReg$(_c, "Body");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./RestaurantCard":"aYxHm","./Shimmer":"imnNo","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-router-dom":"9xmpe","../utils/useOnlineStatus":"7QkbK"}],"aYxHm":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./RestaurantCard":"aYxHm","./Shimmer":"imnNo","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-router-dom":"9xmpe","../utils/useOnlineStatus":"7QkbK","../utils/useResList":"2weZ3"}],"aYxHm":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$0e6c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -34427,6 +34429,47 @@ _s(useOnlineStatus, "MuRHT4nbzkgOPnMMlqOE75+HU4c=");
 exports.default = useOnlineStatus;
 
   $parcel$ReactRefreshHelpers$5cb8.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"2weZ3":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$e8e2 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$e8e2.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _s = $RefreshSig$();
+const useResList = ()=>{
+    _s();
+    const [resList, setResList] = (0, _react.useState)([]);
+    const [filteredRes, setFilteredRes] = (0, _react.useState)([]); // This useState is used to render the fetched data from api so that our search function can work on every aspect.
+    (0, _react.useEffect)(()=>{
+        fetchData();
+    }, []);
+    const fetchData = async ()=>{
+        const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.37240&lng=78.43780&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
+        const json = await data.json();
+        // console.log(json);
+        setResList(json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants);
+        setFilteredRes(json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants);
+    };
+    return [
+        resList,
+        setResList,
+        filteredRes,
+        setFilteredRes
+    ];
+};
+_s(useResList, "bkxa7GUyC8lJQBRkOvIJT1SouZ0=");
+exports.default = useResList;
+
+  $parcel$ReactRefreshHelpers$e8e2.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;

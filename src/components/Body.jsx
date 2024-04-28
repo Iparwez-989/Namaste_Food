@@ -5,31 +5,22 @@ import RestaurantCard from "./RestaurantCard";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import useResList from "../utils/useResList";
 
 
 
 
 
 const Body = ()=>{
-    const [resList,setResList]= useState([]);
-    const [filteredRes, setFilteredRes]= useState([]); // This useState is used to render the fetched data from api so that our search function can work on every aspect.
     const[search,setSearch]= useState('');
     const onlineStatus = useOnlineStatus()
+    const [resList,setResList,filteredRes,setFilteredRes]= useResList()
    
     let filterData = filteredRes.filter((res)=>res.info.avgRating>4)
     // console.log("filterdata",filterData)
     
-    useEffect(()=>{  
-        fetchData();
-    },[])
-    const fetchData = async ()=>{
-        const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.37240&lng=78.43780&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
-        const json = await data.json();
-        // console.log(json);
-        setResList(json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants)
-        setFilteredRes(json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants)
-        
-    }
+    
+    
     const searchFilter = ()=>{
         // reslist is the original data coming from api which is used to filter the data according to 
         // search text and it will copy its filtered data to filtered res which will be rendered on the home screen
@@ -55,7 +46,7 @@ const Body = ()=>{
         return(
             <div>
          <center><h1>Oops !! looks like you are not connected to the internet</h1>
-         <h3>Please check your internet connection</h3></center>
+         <h3>Please check your <i> internet connection</i> and Try again</h3></center>
          </div>
         )
     }
