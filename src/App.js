@@ -1,4 +1,4 @@
-import React from "react";
+import React, { lazy,Suspense } from "react";
 import ReactDOM  from "react-dom/client";
 import Body from "./components/Body";
 import Header from "./components/Header";
@@ -7,8 +7,12 @@ import { createBrowserRouter,RouterProvider,Outlet } from "react-router-dom";
 import ContactUs from "./components/ContactUs";
 import Error from "./components/Error";
 import RestaurantMenu from "./components/RestaurantMenu";
+// import Mart from "./components/Mart";
 
 
+
+
+const Mart = lazy(()=>{import("./components/Mart")})
 const App = ()=>{
     return(
         <div className="app">
@@ -37,6 +41,10 @@ const appRouter = createBrowserRouter([
             {
                 path:'/contact',
                 element: <ContactUs />
+            },
+            {
+                path:'/mart',
+                element: <Suspense fallback={<h1> Loading..... </h1>}><Mart /></Suspense>
             },
             {
                 path:'/restaurant/:resId',

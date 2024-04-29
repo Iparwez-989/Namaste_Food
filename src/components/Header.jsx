@@ -18,6 +18,7 @@ const Header = ()=>{
                     <li>   <Link className="link" to="/"> Home</Link></li>
                     <li> <Link className="link" to="/about">About</Link> </li>
                     <li>    <Link className="link" to="/contact"> Contact</Link></li>
+                    <li>    <Link className="link" to="/mart"> Mart</Link></li>
                     <li>Cart</li>
                     <button className="login-btn" onClick={()=> handleClick()}>{btnName}</button>
                 </ul>
