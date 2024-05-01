@@ -12,7 +12,7 @@ import RestaurantMenu from "./components/RestaurantMenu";
 
 
 
-const Mart = lazy(()=>{import("./components/Mart")})
+const Mart = lazy(()=> import("./components/Mart"))
 const App = ()=>{
     return(
         <div className="app">
@@ -44,7 +44,7 @@ const appRouter = createBrowserRouter([
             },
             {
                 path:'/mart',
-                element: <Suspense fallback={<h1> Loading..... </h1>}><Mart /></Suspense>
+                element: <Suspense fallback={<h1>Loading....</h1>}> <Mart /></Suspense>
             },
             {
                 path:'/restaurant/:resId',

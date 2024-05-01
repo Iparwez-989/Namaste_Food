@@ -2971,9 +2971,7 @@ var _errorDefault = parcelHelpers.interopDefault(_error);
 var _restaurantMenu = require("./components/RestaurantMenu");
 var _restaurantMenuDefault = parcelHelpers.interopDefault(_restaurantMenu);
 // import Mart from "./components/Mart";
-const Mart = /*#__PURE__*/ (0, _react.lazy)(()=>{
-    require("af9c01874e5091ee");
-});
+const Mart = /*#__PURE__*/ (0, _react.lazy)(()=>require("af9c01874e5091ee"));
 _c = Mart;
 const App = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -3040,18 +3038,21 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/mart",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _react.Suspense), {
                     fallback: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                        children: " Loading..... "
+                        children: "Loading...."
                     }, void 0, false, {
                         fileName: "src/App.js",
                         lineNumber: 47,
                         columnNumber: 46
                     }, void 0),
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Mart, {}, void 0, false, {
-                        fileName: "src/App.js",
-                        lineNumber: 47,
-                        columnNumber: 71
-                    }, undefined)
-                }, void 0, false, {
+                    children: [
+                        " ",
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Mart, {}, void 0, false, {
+                            fileName: "src/App.js",
+                            lineNumber: 47,
+                            columnNumber: 69
+                        }, undefined)
+                    ]
+                }, void 0, true, {
                     fileName: "src/App.js",
                     lineNumber: 47,
                     columnNumber: 26
