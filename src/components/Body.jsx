@@ -54,15 +54,17 @@ const Body = ()=>{
     return  resList.length===0? <Shimmer />: (
         <div className="body">
             
-            <div className="search">
-                <input type="text" placeholder="Search your favourite Restaurant" className="searchbar" value={search} onChange={(e)=>{setSearch(e.target.value)}} />
-                <button className="btn" onClick={searchFilter}>Search</button>
+            <div className="m-4 p-4 border border-black flex gap-5 justify-evenly">
+                <div className="search flex px-5 gap-10 ">
+                <input type="text" placeholder="Search your favourite Restaurant" className="w-80 border border-solid border-black searchbar px-10 rounded-lg " value={search} onChange={(e)=>{setSearch(e.target.value)}} />
+                <button className="btn p-1 px-4 bg-green-500 rounded-md" onClick={searchFilter}>Search</button>
+                </div>
+            <div className="filter ">
+                <button className="filter-btn p-1 px-4 bg-gray-500 rounded-md float-right mx-2 " onClick={()=>{setFilteredRes(filterData) }}>Find top Restaurants</button>
             </div>
-            <div className="filter">
-                <button className="filter-btn" onClick={()=>{setFilteredRes(filterData) }}>Find top Restaurants</button>
             </div>
             
-            <div className="res-container">
+            <div className="res-container flex flex-wrap justify-evenly">
                 {/* <RestaurantCard resData={resObj[0]} />
                 <RestaurantCard resData={resObj[1]} />
                 <RestaurantCard resData={resObj[2]} />

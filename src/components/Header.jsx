@@ -9,18 +9,18 @@ const Header = ()=>{
     }
 
     return (
-        <div className="header">
+        <div className="flex justify-between bg-gray-300 shadow-md">
             <div className="logo-container" >
                 <img style={{height:"50px", width:"100px"}} src={LOGO_URL} />
             </div>
-            <div className="nav-items">
-                <ul>
-                    <li>   <Link className="link" to="/"> Home</Link></li>
-                    <li> <Link className="link" to="/about">About</Link> </li>
-                    <li>    <Link className="link" to="/contact"> Contact</Link></li>
-                    <li>    <Link className="link" to="/mart"> Mart</Link></li>
-                    <li>Cart</li>
-                    <button className="login-btn" onClick={()=> handleClick()}>{btnName}</button>
+            <div className="flex items-center">
+                <ul className="flex p-4 m-2 ">
+                    <li>   <Link className="link px-4 " to="/"> Home</Link></li>
+                    <li> <Link className="link px-4" to="/about">About</Link> </li>
+                    <li>    <Link className="link px-4" to="/contact"> Contact</Link></li>
+                    <li>    <Link className="link px-4" to="/mart"> Mart</Link></li>
+                    <li className="px-4">Cart</li>
+                    <button className="login-btn px-4" onClick={()=> handleClick()}>{btnName}</button>
                 </ul>
             </div>
         </div>
