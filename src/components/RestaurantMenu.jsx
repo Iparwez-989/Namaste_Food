@@ -16,7 +16,7 @@ const RestaurantMenu = () => {
         {/* <h3>{resMenu.cards[4].groupedCard.cardGroupMap.REGULAR.cards[1].card.card.itemCards[1].card.info.name}</h3>
         <h3>{resMenu.cards[4].groupedCard.cardGroupMap.REGULAR.cards[1].card.card.itemCards[2].card.info.name}</h3>
         <h3>{resMenu.cards[4].groupedCard.cardGroupMap.REGULAR.cards[1].card.card.itemCards[3].card.info.name}</h3> */}
-    <ol>
+    <ol  className='mx-6 list-decimal font-bold'>
         
     {resMenu.cards[4].groupedCard.cardGroupMap.REGULAR.cards[1].card.card.itemCards.map((item, index) => (
     <li key={index}>{item.card.info.name}</li>

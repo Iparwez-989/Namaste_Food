@@ -12,6 +12,7 @@ const useResList = () => {
         // console.log(json);
         setResList(json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants)
         setFilteredRes(json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants)
+        // console.log(json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants,"hey")
         
     }
   return [resList,setResList,filteredRes,setFilteredRes]

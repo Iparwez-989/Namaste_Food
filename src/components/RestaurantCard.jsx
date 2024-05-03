@@ -2,7 +2,8 @@ import React from "react";
 import { CDN_URL } from "../utils/constants";
 const RestaurantCard = (props)=>{
     const{resData}=props;
-  //   console.log(props)
+    
+    // console.log(props)
     return (
         <div className="res-card m-2 p-4 w-[240px] bg-gray-300">
         <img className="res-logo rounded-md " alt="res-logo" src={CDN_URL+resData.info.cloudinaryImageId} />   
@@ -14,5 +15,18 @@ const RestaurantCard = (props)=>{
         </div>
     )
   }
+export const withPromotedLabel = (RestaurantCard)=>{
+  return (props)=>{
+    return(
+      <div>
+      <Label>
+        Promoted
+      </Label>
+      <RestaurantCard {...props} />
+      </div>
+    )
+  }
+}
+
 
 export default RestaurantCard;
