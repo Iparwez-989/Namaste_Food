@@ -54,7 +54,7 @@ const Body = ()=>{
     return  resList.length===0? <Shimmer />: (
         <div className="body">
             
-            <div className="m-4 p-4 border border-black flex gap-5 justify-evenly">
+            <div className="m-4 p-4  flex gap-5 justify-evenly">
                 <div className="search flex px-5 gap-10 ">
                 <input type="text" placeholder="Search your favourite Restaurant" className="w-80 border border-solid border-black searchbar px-10 rounded-lg " value={search} onChange={(e)=>{setSearch(e.target.value)}} />
                 <button className="btn p-1 px-4 bg-green-500 rounded-md" onClick={searchFilter}>Search</button>

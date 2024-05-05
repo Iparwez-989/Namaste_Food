@@ -27365,7 +27365,7 @@ const Body = ()=>{
         className: "body",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "m-4 p-4 border border-black flex gap-5 justify-evenly",
+                className: "m-4 p-4  flex gap-5 justify-evenly",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         className: "search flex px-5 gap-10 ",
@@ -35198,47 +35198,62 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _itemList = require("./ItemList");
 var _itemListDefault = parcelHelpers.interopDefault(_itemList);
+var _s = $RefreshSig$();
 const RestaurantCategory = (props)=>{
+    _s();
+    const [showItems, setShowItems] = (0, _react.useState)(false);
+    function handleClick() {
+        console.log("Clicked");
+        setShowItems(!showItems);
+    }
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "w-6/12 bg-gray-400  mx-auto",
+        className: "w-6/12 bg-gray-400  mx-auto my-2 ",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "flex justify-between",
+                className: "flex justify-between cursor-pointer ",
+                onClick: handleClick,
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                        children: props.data.title
-                    }, void 0, false, {
+                        className: "text-xl font-semibold",
+                        children: [
+                            props.data.title,
+                            "(",
+                            props.data.itemCards.length,
+                            ")"
+                        ]
+                    }, void 0, true, {
                         fileName: "src/components/RestaurantCategory.jsx",
-                        lineNumber: 9,
+                        lineNumber: 14,
                         columnNumber: 7
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                         children: "\uD83D\uDD3D"
                     }, void 0, false, {
                         fileName: "src/components/RestaurantCategory.jsx",
-                        lineNumber: 9,
-                        columnNumber: 38
+                        lineNumber: 14,
+                        columnNumber: 103
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/RestaurantCategory.jsx",
-                lineNumber: 7,
+                lineNumber: 12,
                 columnNumber: 9
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _itemListDefault.default), {
+            showItems && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _itemListDefault.default), {
                 items: props.data.itemCards
             }, void 0, false, {
                 fileName: "src/components/RestaurantCategory.jsx",
-                lineNumber: 11,
-                columnNumber: 9
+                lineNumber: 16,
+                columnNumber: 23
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/RestaurantCategory.jsx",
-        lineNumber: 6,
+        lineNumber: 11,
         columnNumber: 5
     }, undefined);
 };
+_s(RestaurantCategory, "qs4p7mI6lfD36arOP3cbFTfcWHc=");
 _c = RestaurantCategory;
 exports.default = RestaurantCategory;
 var _c;
@@ -35259,18 +35274,92 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _constants = require("../utils/constants");
 const ItemList = ({ items })=>{
-    return items.map(()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                children: items.card.info.name
-            }, void 0, false, {
-                fileName: "src/components/ItemList.jsx",
-                lineNumber: 5,
-                columnNumber: 17
-            }, undefined)
-        }, void 0, false, {
+    return items.map((items)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "m-2 p-2 border-gray-100 border-b-2 flex justify-between ",
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "w-9/12",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "py-1",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                    className: "text-md font-bold ",
+                                    children: items?.card?.info?.name
+                                }, void 0, false, {
+                                    fileName: "src/components/ItemList.jsx",
+                                    lineNumber: 8,
+                                    columnNumber: 17
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                    children: [
+                                        "\u20B9",
+                                        items?.card?.info?.price / 100
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/components/ItemList.jsx",
+                                    lineNumber: 9,
+                                    columnNumber: 17
+                                }, undefined)
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/components/ItemList.jsx",
+                            lineNumber: 7,
+                            columnNumber: 13
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                            className: "text-xs",
+                            children: items?.card?.info?.description
+                        }, void 0, false, {
+                            fileName: "src/components/ItemList.jsx",
+                            lineNumber: 11,
+                            columnNumber: 17
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/ItemList.jsx",
+                    lineNumber: 6,
+                    columnNumber: 13
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "w-3/12",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "absolute mx-24 ",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                className: "rounded border bg-black text-white border-black shadow-lg px-2 py-0.5 hover:text-black hover:bg-green-400",
+                                children: "Add+"
+                            }, void 0, false, {
+                                fileName: "src/components/ItemList.jsx",
+                                lineNumber: 15,
+                                columnNumber: 21
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/components/ItemList.jsx",
+                            lineNumber: 14,
+                            columnNumber: 17
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                            src: (0, _constants.CDN_URL) + items.card.info.imageId,
+                            alt: "img",
+                            className: "object-cover"
+                        }, void 0, false, {
+                            fileName: "src/components/ItemList.jsx",
+                            lineNumber: 17,
+                            columnNumber: 13
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/ItemList.jsx",
+                    lineNumber: 13,
+                    columnNumber: 13
+                }, undefined)
+            ]
+        }, void 0, true, {
             fileName: "src/components/ItemList.jsx",
-            lineNumber: 4,
+            lineNumber: 5,
             columnNumber: 13
         }, undefined));
 };
@@ -35284,7 +35373,7 @@ $RefreshReg$(_c, "ItemList");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"84lsG":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../utils/constants":"hB8jg"}],"84lsG":[function(require,module,exports) {
 module.exports = require("ee0c10c0f7dc8cdb")(require("ec07281571cb7f2e").getBundleURL("aXMci") + "Mart.77051280.js" + "?" + Date.now()).catch((err)=>{
     delete module.bundle.cache[module.id];
     throw err;
