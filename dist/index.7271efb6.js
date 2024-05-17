@@ -27484,7 +27484,7 @@ const RestaurantCard = (props)=>{
     const { resData } = props;
     // console.log(props)
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "res-card m-2 p-4 w-[240px] bg-gray-300",
+        className: "res-card m-2 p-4 w-[200px] ",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                 className: "res-logo rounded-md ",
@@ -35090,7 +35090,8 @@ const RestaurantMenu = ()=>{
     _s();
     const { resId } = (0, _reactRouterDom.useParams)();
     const resMenu = (0, _useRestaurantMenuDefault.default)(resId); //useRestaurantMenu is the custom hook here
-    // ------------------------------this line was throwin error-----------
+    const [showIndex, setShowIndex] = (0, _react.useState)(0);
+    // ------------------------------this line was throwing error-----------
     // const {itemCards}= resMenu?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card;
     // --------------------So we're using this line-----------------------
     const { cards } = resMenu || {}; // Destructure `cards` with a null check
@@ -35100,7 +35101,7 @@ const RestaurantMenu = ()=>{
     console.log(categories, "filtered category");
     return resMenu === "" ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
         fileName: "src/components/RestaurantMenu.jsx",
-        lineNumber: 25,
+        lineNumber: 26,
         columnNumber: 27
     }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         children: [
@@ -35109,7 +35110,7 @@ const RestaurantMenu = ()=>{
                 children: resMenu.cards[2].card.card.info.name
             }, void 0, false, {
                 fileName: "src/components/RestaurantMenu.jsx",
-                lineNumber: 28,
+                lineNumber: 29,
                 columnNumber: 9
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -35117,24 +35118,26 @@ const RestaurantMenu = ()=>{
                 children: resMenu.cards[2].card.card.info.cuisines.join(", ")
             }, void 0, false, {
                 fileName: "src/components/RestaurantMenu.jsx",
-                lineNumber: 29,
+                lineNumber: 30,
                 columnNumber: 9
             }, undefined),
-            categories.map((category)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restaurantCategoryDefault.default), {
-                    data: category.card.card
+            categories.map((category, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restaurantCategoryDefault.default), {
+                    data: category.card.card,
+                    showItems: index === showIndex && true,
+                    setShowIndex: ()=>setShowIndex(index)
                 }, void 0, false, {
                     fileName: "src/components/RestaurantMenu.jsx",
-                    lineNumber: 31,
-                    columnNumber: 38
+                    lineNumber: 33,
+                    columnNumber: 11
                 }, undefined))
         ]
     }, void 0, true, {
         fileName: "src/components/RestaurantMenu.jsx",
-        lineNumber: 26,
+        lineNumber: 27,
         columnNumber: 5
     }, undefined);
 };
-_s(RestaurantMenu, "XgIxG6uIP758/ep45ubafcMUla0=", false, function() {
+_s(RestaurantMenu, "ksrEGZpS7zheU9afeh6eO8gp0j0=", false, function() {
     return [
         (0, _reactRouterDom.useParams),
         (0, _useRestaurantMenuDefault.default)
@@ -35198,13 +35201,11 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _itemList = require("./ItemList");
 var _itemListDefault = parcelHelpers.interopDefault(_itemList);
-var _s = $RefreshSig$();
 const RestaurantCategory = (props)=>{
-    _s();
-    const [showItems, setShowItems] = (0, _react.useState)(false);
+    // const {setShowIndex}= props
     function handleClick() {
         console.log("Clicked");
-        setShowItems(!showItems);
+        props.setShowIndex();
     }
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "w-6/12 bg-gray-400  mx-auto my-2 ",
@@ -35239,12 +35240,12 @@ const RestaurantCategory = (props)=>{
                 lineNumber: 12,
                 columnNumber: 9
             }, undefined),
-            showItems && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _itemListDefault.default), {
+            props.showItems && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _itemListDefault.default), {
                 items: props.data.itemCards
             }, void 0, false, {
                 fileName: "src/components/RestaurantCategory.jsx",
                 lineNumber: 16,
-                columnNumber: 23
+                columnNumber: 29
             }, undefined)
         ]
     }, void 0, true, {
@@ -35253,7 +35254,6 @@ const RestaurantCategory = (props)=>{
         columnNumber: 5
     }, undefined);
 };
-_s(RestaurantCategory, "qs4p7mI6lfD36arOP3cbFTfcWHc=");
 _c = RestaurantCategory;
 exports.default = RestaurantCategory;
 var _c;

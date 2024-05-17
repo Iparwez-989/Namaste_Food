@@ -7,7 +7,8 @@ import Shimmer from './Shimmer'
 const RestaurantMenu = () => {
     const {resId} = useParams();
     const resMenu = useRestaurantMenu(resId); //useRestaurantMenu is the custom hook here
-    // ------------------------------this line was throwin error-----------
+    const [showIndex,setShowIndex]= useState(0)
+    // ------------------------------this line was throwing error-----------
 
     // const {itemCards}= resMenu?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card;
 
@@ -28,7 +29,13 @@ const RestaurantMenu = () => {
         <p className='text-3xl font-bold text-center'>{resMenu.cards[2].card.card.info.name}</p>
         <p className='text-xl my-3 font-bold text-center'>{resMenu.cards[2].card.card.info.cuisines.join(', ')}</p>
         {/* Categories accordians */}
-        {categories.map((category)=> <RestaurantCategory data={category.card.card} />)}
+        {categories.map((category,index)=>(
+          <RestaurantCategory data={category.card.card} 
+          showItems={index===showIndex && true}
+          setShowIndex={()=>setShowIndex(index)}
+          />
+          
+        ) )}
 
     </div>
   )

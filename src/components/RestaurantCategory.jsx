@@ -2,10 +2,10 @@ import React, { useState } from 'react'
 import ItemList from './ItemList'
 
 const RestaurantCategory = (props) => {
-  const[showItems,setShowItems]= useState(false)
+  // const {setShowIndex}= props
   function handleClick(){
        console.log('Clicked')
-       setShowItems(!showItems)
+      props.setShowIndex()
   }
   return (
     <div className='w-6/12 bg-gray-400  mx-auto my-2 ' >
@@ -13,7 +13,7 @@ const RestaurantCategory = (props) => {
 
       <span className='text-xl font-semibold'>{props.data.title}({props.data.itemCards.length})</span><span>🔽</span>
         </div>
-        {showItems && <ItemList items={props.data.itemCards} />}
+        {props.showItems && <ItemList items={props.data.itemCards} />}
     </div>
   )
 }
