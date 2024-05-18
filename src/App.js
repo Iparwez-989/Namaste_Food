@@ -1,4 +1,4 @@
-import React, { lazy,Suspense } from "react";
+import React, { lazy,Suspense, useEffect, useState } from "react";
 import ReactDOM  from "react-dom/client";
 import Body from "./components/Body";
 import Header from "./components/Header";
@@ -13,15 +13,27 @@ import UserContext from "./utils/UserContext";
 
 
 
+
 const Mart = lazy(()=> import("./components/Mart"))
 const App = ()=>{
+    const [userInfo,setUserInfo] = useState()
+    useEffect(()=>{
+        const data = {
+            name:"irfan parwez"
+        }
+
+        setUserInfo(data.name);
+
+    },[])
     return(
+        <UserContext.Provider value={userInfo}>
         <div className="app">
             <Header />
             
             <Outlet />
 
         </div>
+        </UserContext.Provider> 
      )
 }
 

@@ -62,6 +62,7 @@ const Body = ()=>{
             <div className="filter ">
                 <button className="filter-btn p-1 px-4 bg-gray-500 rounded-md float-right mx-2 " onClick={()=>{setFilteredRes(filterData) }}>Find top Restaurants</button>
             </div>
+            <input type="text" className="border border-black"/>
             </div>
             
             <div className="res-container flex flex-wrap justify-evenly">

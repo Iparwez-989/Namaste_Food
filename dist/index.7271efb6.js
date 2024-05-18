@@ -2972,43 +2972,60 @@ var _restaurantMenu = require("./components/RestaurantMenu");
 var _restaurantMenuDefault = parcelHelpers.interopDefault(_restaurantMenu);
 var _userContext = require("./utils/UserContext");
 var _userContextDefault = parcelHelpers.interopDefault(_userContext);
+var _s = $RefreshSig$();
 // import Mart from "./components/Mart";
 const Mart = /*#__PURE__*/ (0, _react.lazy)(()=>require("af9c01874e5091ee"));
 _c = Mart;
 const App = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "app",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerDefault.default), {}, void 0, false, {
-                fileName: "src/App.js",
-                lineNumber: 20,
-                columnNumber: 13
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Outlet), {}, void 0, false, {
-                fileName: "src/App.js",
-                lineNumber: 22,
-                columnNumber: 13
-            }, undefined)
-        ]
-    }, void 0, true, {
+    _s();
+    const [userInfo, setUserInfo] = (0, _react.useState)();
+    (0, _react.useEffect)(()=>{
+        const data = {
+            name: "irfan parwez"
+        };
+        setUserInfo(data.name);
+    }, []);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _userContextDefault.default).Provider, {
+        value: userInfo,
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "app",
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerDefault.default), {}, void 0, false, {
+                    fileName: "src/App.js",
+                    lineNumber: 31,
+                    columnNumber: 13
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Outlet), {}, void 0, false, {
+                    fileName: "src/App.js",
+                    lineNumber: 33,
+                    columnNumber: 13
+                }, undefined)
+            ]
+        }, void 0, true, {
+            fileName: "src/App.js",
+            lineNumber: 30,
+            columnNumber: 9
+        }, undefined)
+    }, void 0, false, {
         fileName: "src/App.js",
-        lineNumber: 19,
+        lineNumber: 29,
         columnNumber: 9
     }, undefined);
 };
+_s(App, "RBm2SNbmotbgcuKqY7yUMkmlyZg=");
 _c1 = App;
 const appRouter = (0, _reactRouterDom.createBrowserRouter)([
     {
         path: "/",
         element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(App, {}, void 0, false, {
             fileName: "src/App.js",
-            lineNumber: 31,
+            lineNumber: 43,
             columnNumber: 18
         }, undefined),
         // error element is used to show error page when user enter undefined or wrong path.  
         errorElement: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _errorDefault.default), {}, void 0, false, {
             fileName: "src/App.js",
-            lineNumber: 33,
+            lineNumber: 45,
             columnNumber: 23
         }, undefined),
         children: [
@@ -3016,7 +3033,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _bodyDefault.default), {}, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 37,
+                    lineNumber: 49,
                     columnNumber: 25
                 }, undefined)
             },
@@ -3024,7 +3041,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/about",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _aboutDefault.default), {}, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 41,
+                    lineNumber: 53,
                     columnNumber: 26
                 }, undefined)
             },
@@ -3032,7 +3049,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/contact",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _contactUsDefault.default), {}, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 45,
+                    lineNumber: 57,
                     columnNumber: 26
                 }, undefined)
             },
@@ -3043,20 +3060,20 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                         children: "Loading...."
                     }, void 0, false, {
                         fileName: "src/App.js",
-                        lineNumber: 49,
+                        lineNumber: 61,
                         columnNumber: 46
                     }, void 0),
                     children: [
                         " ",
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Mart, {}, void 0, false, {
                             fileName: "src/App.js",
-                            lineNumber: 49,
+                            lineNumber: 61,
                             columnNumber: 69
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/App.js",
-                    lineNumber: 49,
+                    lineNumber: 61,
                     columnNumber: 26
                 }, undefined)
             },
@@ -3064,7 +3081,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/restaurant/:resId",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restaurantMenuDefault.default), {}, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 53,
+                    lineNumber: 65,
                     columnNumber: 26
                 }, undefined)
             }
@@ -3076,7 +3093,7 @@ root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.RouterP
     router: appRouter
 }, void 0, false, {
     fileName: "src/App.js",
-    lineNumber: 63,
+    lineNumber: 75,
     columnNumber: 13
 }, undefined));
 var _c, _c1;
@@ -27417,6 +27434,14 @@ const Body = ()=>{
                         fileName: "src/components/Body.jsx",
                         lineNumber: 62,
                         columnNumber: 13
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                        type: "text",
+                        className: "border border-black"
+                    }, void 0, false, {
+                        fileName: "src/components/Body.jsx",
+                        lineNumber: 65,
+                        columnNumber: 13
                     }, undefined)
                 ]
             }, void 0, true, {
@@ -27432,17 +27457,17 @@ const Body = ()=>{
                             resData: restaurant
                         }, void 0, false, {
                             fileName: "src/components/Body.jsx",
-                            lineNumber: 83,
+                            lineNumber: 84,
                             columnNumber: 21
                         }, undefined)
                     }, restaurant.info.id, false, {
                         fileName: "src/components/Body.jsx",
-                        lineNumber: 79,
+                        lineNumber: 80,
                         columnNumber: 21
                     }, undefined))
             }, void 0, false, {
                 fileName: "src/components/Body.jsx",
-                lineNumber: 67,
+                lineNumber: 68,
                 columnNumber: 13
             }, undefined)
         ]
@@ -27488,7 +27513,7 @@ var _s = $RefreshSig$();
 const RestaurantCard = (props)=>{
     _s();
     const { resData } = props;
-    const { name } = (0, _react.useContext)((0, _userContextDefault.default));
+    const data = (0, _react.useContext)((0, _userContextDefault.default));
     // console.log(props)
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "res-card m-2 p-4 w-[200px] ",
@@ -27543,17 +27568,6 @@ const RestaurantCard = (props)=>{
                 fileName: "src/components/RestaurantCard.jsx",
                 lineNumber: 17,
                 columnNumber: 9
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
-                children: [
-                    "UserName: ",
-                    name,
-                    " "
-                ]
-            }, void 0, true, {
-                fileName: "src/components/RestaurantCard.jsx",
-                lineNumber: 18,
-                columnNumber: 9
             }, undefined)
         ]
     }, void 0, true, {
@@ -27562,7 +27576,7 @@ const RestaurantCard = (props)=>{
         columnNumber: 9
     }, undefined);
 };
-_s(RestaurantCard, "h93vP9yh4pMEArTc2jMcW4qOCHc=");
+_s(RestaurantCard, "QDbvtl2XjZhCafbmMBOV/hNJip4=");
 _c = RestaurantCard;
 const withPromotedLabel = (RestaurantCard)=>{
     return (props)=>{
