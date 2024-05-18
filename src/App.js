@@ -7,6 +7,7 @@ import { createBrowserRouter,RouterProvider,Outlet } from "react-router-dom";
 import ContactUs from "./components/ContactUs";
 import Error from "./components/Error";
 import RestaurantMenu from "./components/RestaurantMenu";
+import UserContext from "./utils/UserContext";
 // import Mart from "./components/Mart";
 
 
@@ -17,6 +18,7 @@ const App = ()=>{
     return(
         <div className="app">
             <Header />
+            
             <Outlet />
 
         </div>

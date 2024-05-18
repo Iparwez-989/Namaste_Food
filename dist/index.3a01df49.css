@@ -297,22 +297,6 @@ img, video {
   display: flex;
 }
 
-.h-auto {
-  height: auto;
-}
-
-.h-\[300px\] {
-  height: 300px;
-}
-
-.h-\[800px\] {
-  height: 800px;
-}
-
-.h-\[500px\] {
-  height: 500px;
-}
-
 .w-3\/12 {
   width: 25%;
 }
@@ -327,10 +311,6 @@ img, video {
 
 .w-9\/12 {
   width: 75%;
-}
-
-.w-\[150px\] {
-  width: 150px;
 }
 
 .w-\[200px\] {
