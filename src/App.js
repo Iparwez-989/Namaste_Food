@@ -16,24 +16,25 @@ import UserContext from "./utils/UserContext";
 
 const Mart = lazy(()=> import("./components/Mart"))
 const App = ()=>{
-    const [userInfo,setUserInfo] = useState()
+    const [userName,setUserName] = useState()
     useEffect(()=>{
         const data = {
             name:"irfan parwez"
         }
 
-        setUserInfo(data.name);
+        setUserName(data.name);
 
     },[])
     return(
-        <UserContext.Provider value={userInfo}>
+        <UserContext.Provider value={{name:userName,setUserName}}>
         <div className="app">
-            <Header />
-            
+            {/* We can use this userContext.provider either in all over the app or in individual components with different different values */}
+            {/* Here we are using .provider in all over the app so it will change the data everywhere in the application */}
+            <Header /> 
             <Outlet />
 
         </div>
-        </UserContext.Provider> 
+        </UserContext.Provider>
      )
 }
 

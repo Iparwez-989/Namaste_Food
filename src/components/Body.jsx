@@ -1,11 +1,12 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState,useContext } from "react";
 // import resObj from "../utils/mockData";
 import RestaurantCard from "./RestaurantCard";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import useResList from "../utils/useResList";
+import UserContext from "../utils/UserContext";
 
 
 
@@ -19,7 +20,7 @@ const Body = ()=>{
     let filterData = filteredRes.filter((res)=>res.info.avgRating>4)
     // console.log("filterdata",filterData)
     
-    
+    const {setUserName,name}= useContext(UserContext)
     
     const searchFilter = ()=>{
         // reslist is the original data coming from api which is used to filter the data according to 
@@ -62,7 +63,7 @@ const Body = ()=>{
             <div className="filter ">
                 <button className="filter-btn p-1 px-4 bg-gray-500 rounded-md float-right mx-2 " onClick={()=>{setFilteredRes(filterData) }}>Find top Restaurants</button>
             </div>
-            <input type="text" className="border border-black"/>
+            <input type="text" className="border border-black px-3" value={name} onChange={(e)=>{setUserName(e.target.value)}}/>
             </div>
             
             <div className="res-container flex flex-wrap justify-evenly">

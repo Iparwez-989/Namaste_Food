@@ -8,7 +8,7 @@ const Header = ()=>{
     function handleClick (){
         btnName==='LogIn'?setBtnName(' '): setBtnName('LogIn');
     }
-    const data= useContext(UserContext)
+    const {name}= useContext(UserContext)
     // console.log(name)
     return (
         <div className="flex justify-between bg-gray-300 shadow-md">
@@ -23,7 +23,7 @@ const Header = ()=>{
                     <li>    <Link className="link px-4" to="/mart"> Mart</Link></li>
                     <li className="px-4">Cart</li>
                     <button className="login-btn px-4" onClick={()=> handleClick()}>{btnName}</button>
-                    <li className="px-4">{data.name}</li>
+                    <li className="px-4">{name}</li>
                 </ul>
             </div>
         </div>
