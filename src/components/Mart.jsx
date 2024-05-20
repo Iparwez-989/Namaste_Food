@@ -6,7 +6,7 @@ const Mart = () => {
   return (
     <div>
       <h1>This is mart page</h1>
-      <p>Username: {name}</p>
+      <p>Username:{name}</p>
     </div>
   )
 }

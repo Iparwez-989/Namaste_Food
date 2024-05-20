@@ -8,6 +8,8 @@ import ContactUs from "./components/ContactUs";
 import Error from "./components/Error";
 import RestaurantMenu from "./components/RestaurantMenu";
 import UserContext from "./utils/UserContext";
+import appStore from "./reduxStore/appStore";
+import { Provider } from "react-redux";
 // import Mart from "./components/Mart";
 
 
@@ -26,6 +28,7 @@ const App = ()=>{
 
     },[])
     return(
+        <Provider store={appStore}>
         <UserContext.Provider value={{name:userName,setUserName}}>
         <div className="app">
             {/* We can use this userContext.provider either in all over the app or in individual components with different different values */}
@@ -35,6 +38,7 @@ const App = ()=>{
 
         </div>
         </UserContext.Provider>
+        </Provider>
      )
 }
 

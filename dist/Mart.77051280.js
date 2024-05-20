@@ -633,7 +633,7 @@ const Mart = ()=>{
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                 children: [
-                    "Username: ",
+                    "Username:",
                     name
                 ]
             }, void 0, true, {
