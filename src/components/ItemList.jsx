@@ -1,5 +1,11 @@
+import { useDispatch } from "react-redux";
+import { addItem } from "../reduxStore/cartSlice";
 import { CDN_URL } from "../utils/constants";
 const ItemList = ({items})=>{
+    const dispatch = useDispatch();
+    const handleAddItem = (items)=>{
+        dispatch(addItem(items))
+    }
     return(
         items.map((items)=> 
             <div className="m-2 p-2 border-gray-100 border-b-2 flex justify-between " > 
@@ -12,7 +18,7 @@ const ItemList = ({items})=>{
             </div>
             <div className="w-3/12">
                 <div className="absolute mx-24 ">
-                    <button className="rounded border bg-black text-white border-black shadow-lg px-2 py-0.5 hover:text-black hover:bg-green-400">Add+</button>
+                    <button className="rounded border bg-black text-white border-black shadow-lg px-2 py-0.5 hover:text-black hover:bg-green-400" onClick={()=>handleAddItem(items)}>Add+</button>
                 </div>
             <img src={CDN_URL + items.card.info.imageId} alt="img" className="object-cover"  />
             </div>

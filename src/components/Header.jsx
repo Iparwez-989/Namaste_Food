@@ -14,6 +14,7 @@ const Header = ()=>{
 
     // Here we're subscribing to the store using selector
     const cartItems = useSelector((state)=>state.cart.items)
+    console.log(cartItems)
     return (
         <div className="flex justify-between bg-gray-300 shadow-md">
             <div className="logo-container" >
@@ -25,7 +26,7 @@ const Header = ()=>{
                     <li> <Link className="link px-4" to="/about">About</Link> </li>
                     <li>    <Link className="link px-4" to="/contact"> Contact</Link></li>
                     <li>    <Link className="link px-4" to="/mart"> Mart</Link></li>
-                    <li className="px-4 font-bold text-xl ">Cart -({cartItems.length} items)</li>
+                    <li> <Link className="px-4 font-bold text-xl " to="/cart">Cart -({cartItems.length} items)</Link></li>
                     <button className="login-btn px-4" onClick={()=> handleClick()}>{btnName}</button>
                     <li className="px-4">{name}</li>
                 </ul>

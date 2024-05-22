@@ -10,6 +10,7 @@ import RestaurantMenu from "./components/RestaurantMenu";
 import UserContext from "./utils/UserContext";
 import appStore from "./reduxStore/appStore";
 import { Provider } from "react-redux";
+import Cart from "./components/Cart";
 // import Mart from "./components/Mart";
 
 
@@ -60,6 +61,10 @@ const appRouter = createBrowserRouter([
             {
                 path:'/contact',
                 element: <ContactUs />
+            },
+            {
+                path:'/cart',
+                element: <Cart />
             },
             {
                 path:'/mart',
