@@ -36193,14 +36193,91 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 const ContactUs = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-            children: "This is ContactUs page"
-        }, void 0, false, {
-            fileName: "src/components/ContactUs.jsx",
-            lineNumber: 5,
-            columnNumber: 13
-        }, undefined)
-    }, void 0, false, {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("center", {
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                    className: "text-2xl font-semibold",
+                    children: "Please fill up the form! "
+                }, void 0, false, {
+                    fileName: "src/components/ContactUs.jsx",
+                    lineNumber: 5,
+                    columnNumber: 21
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/components/ContactUs.jsx",
+                lineNumber: 5,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("form", {
+                action: "",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                        htmlFor: "",
+                        children: " Your name:"
+                    }, void 0, false, {
+                        fileName: "src/components/ContactUs.jsx",
+                        lineNumber: 7,
+                        columnNumber: 17
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                        type: "text",
+                        placeholder: "Enter your name",
+                        className: "p-3 m-2  border border-black"
+                    }, void 0, false, {
+                        fileName: "src/components/ContactUs.jsx",
+                        lineNumber: 8,
+                        columnNumber: 17
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                        htmlFor: "",
+                        children: "Enter your Email:"
+                    }, void 0, false, {
+                        fileName: "src/components/ContactUs.jsx",
+                        lineNumber: 9,
+                        columnNumber: 17
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                        type: "email",
+                        placeholder: "Enter your Email",
+                        className: "p-3 m-2 border border-black"
+                    }, void 0, false, {
+                        fileName: "src/components/ContactUs.jsx",
+                        lineNumber: 10,
+                        columnNumber: 17
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                        htmlFor: "",
+                        children: "Your Message:"
+                    }, void 0, false, {
+                        fileName: "src/components/ContactUs.jsx",
+                        lineNumber: 11,
+                        columnNumber: 17
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                        type: "text",
+                        placeholder: "Message",
+                        className: "p-3 m-3 border border-black rounded"
+                    }, void 0, false, {
+                        fileName: "src/components/ContactUs.jsx",
+                        lineNumber: 12,
+                        columnNumber: 17
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: "border border-black rounded-xl m-2 p-2 bg-black text-white hover:bg-green-400 hover:text-black",
+                        children: "Submit"
+                    }, void 0, false, {
+                        fileName: "src/components/ContactUs.jsx",
+                        lineNumber: 13,
+                        columnNumber: 17
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/ContactUs.jsx",
+                lineNumber: 6,
+                columnNumber: 13
+            }, undefined)
+        ]
+    }, void 0, true, {
         fileName: "src/components/ContactUs.jsx",
         lineNumber: 4,
         columnNumber: 9
