@@ -27,3 +27,7 @@ test('should load all three input boxes ', () => {
   expect(inputBoxes.length).toBe(3)
   
 })
+
+// We can also group various test cases inside a describe block.
+// Instead of using test function we can also use it function.
+// In header testing we've used describe function as well as it function.
