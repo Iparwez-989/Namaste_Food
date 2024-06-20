@@ -268,16 +268,16 @@ img, video {
   margin: .5rem;
 }
 
+.m-3 {
+  margin: .75rem;
+}
+
 .m-4 {
   margin: 1rem;
 }
 
 .m-auto {
   margin: auto;
-}
-
-.m-3 {
-  margin: .75rem;
 }
 
 .mx-2 {
@@ -303,6 +303,10 @@ img, video {
 .my-3 {
   margin-top: .75rem;
   margin-bottom: .75rem;
+}
+
+.block {
+  display: block;
 }
 
 .flex {
@@ -432,12 +436,12 @@ img, video {
   padding: .5rem;
 }
 
-.p-4 {
-  padding: 1rem;
-}
-
 .p-3 {
   padding: .75rem;
+}
+
+.p-4 {
+  padding: 1rem;
 }
 
 .px-10 {

@@ -7,7 +7,7 @@ import { useSelector } from "react-redux";
 const Header = ()=>{
     const[btnName,setBtnName] = useState("LogIn");
     function handleClick (){
-        btnName==='LogIn'?setBtnName(' '): setBtnName('LogIn');
+        btnName==='LogIn'?setBtnName('logOut'): setBtnName('LogIn');
     }
     const {name}= useContext(UserContext)
     // console.log(name)
@@ -27,7 +27,7 @@ const Header = ()=>{
                     <li>    <Link className="link px-4" to="/contact"> Contact</Link></li>
                     <li>    <Link className="link px-4" to="/mart"> Mart</Link></li>
                     <li> <Link className="px-4 font-bold text-xl " to="/cart">Cart -({cartItems.length} items)</Link></li>
-                    <button className="login-btn px-4" onClick={()=> handleClick()}>{btnName}</button>
+                    <button className="login-btn px-4" name="login" onClick={()=> handleClick()}>{btnName}</button>
                     <li className="px-4">{name}</li>
                 </ul>
             </div>

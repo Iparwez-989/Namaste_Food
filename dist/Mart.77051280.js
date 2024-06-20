@@ -659,6 +659,6 @@ $RefreshReg$(_c, "Mart");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../utils/UserContext":"9LAud"}]},["8bhOT","1xC6H"], null, "parcelRequirefd80")
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../utils/UserContext":"9LAud","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["8bhOT","1xC6H"], null, "parcelRequirefd80")
 
 //# sourceMappingURL=Mart.77051280.js.map

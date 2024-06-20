@@ -1,4 +1,4 @@
-import { render,screen } from "@testing-library/react"
+import { fireEvent, render,screen } from "@testing-library/react"
 import Header from "../Header"
 import {Provider} from "react-redux"
 import appStore from "../../reduxStore/appStore"
@@ -30,5 +30,20 @@ describe('Testing header Component  ',()=>{
           const cart = screen.getByText("Cart -(0 items)")
           expect(cart).toBeInTheDocument()
       
+      })
+
+      test('should change text logout from login on click',()=>{
+        render(
+            <BrowserRouter>
+            <Provider store={appStore}>
+                <Header />
+            </Provider>
+            </BrowserRouter>
+           )
+        const login = screen.getByText('LogIn')
+        fireEvent.click(login)
+        const logout = screen.getByText('logOut')
+        expect(logout).toBeInTheDocument()
+
       })
 })

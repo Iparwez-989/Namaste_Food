@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1717315274409" clover="3.2.0">
-  <project timestamp="1717315274410" name="All files">
-    <metrics statements="22" coveredstatements="17" conditionals="2" coveredconditionals="0" methods="9" coveredmethods="4" elements="33" coveredelements="21" complexity="0" loc="22" ncloc="22" packages="3" files="7" classes="7"/>
+<coverage generated="1718815254841" clover="3.2.0">
+  <project timestamp="1718815254842" name="All files">
+    <metrics statements="22" coveredstatements="19" conditionals="2" coveredconditionals="1" methods="9" coveredmethods="6" elements="33" coveredelements="26" complexity="0" loc="22" ncloc="22" packages="3" files="7" classes="7"/>
     <package name="components">
-      <metrics statements="12" coveredstatements="10" conditionals="2" coveredconditionals="0" methods="6" coveredmethods="4"/>
+      <metrics statements="12" coveredstatements="12" conditionals="2" coveredconditionals="1" methods="6" coveredmethods="6"/>
       <file name="ContactUs.jsx" path="D:\NamasteReact\NamasteFood\src\components\ContactUs.jsx">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="4" type="stmt"/>
       </file>
       <file name="Header.jsx" path="D:\NamasteReact\NamasteFood\src\components\Header.jsx">
-        <metrics statements="8" coveredstatements="6" conditionals="2" coveredconditionals="0" methods="4" coveredmethods="2"/>
+        <metrics statements="8" coveredstatements="8" conditionals="2" coveredconditionals="1" methods="4" coveredmethods="4"/>
         <line num="7" count="1" type="stmt"/>
-        <line num="8" count="2" type="stmt"/>
-        <line num="10" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="12" count="2" type="stmt"/>
-        <line num="16" count="4" type="stmt"/>
-        <line num="17" count="2" type="stmt"/>
-        <line num="18" count="2" type="stmt"/>
-        <line num="30" count="0" type="stmt"/>
+        <line num="8" count="4" type="stmt"/>
+        <line num="10" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="12" count="4" type="stmt"/>
+        <line num="16" count="7" type="stmt"/>
+        <line num="17" count="4" type="stmt"/>
+        <line num="18" count="4" type="stmt"/>
+        <line num="30" count="1" type="stmt"/>
       </file>
       <file name="sum.js" path="D:\NamasteReact\NamasteFood\src\components\sum.js">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
