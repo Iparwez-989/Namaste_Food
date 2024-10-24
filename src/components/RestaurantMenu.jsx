@@ -7,7 +7,7 @@ import Shimmer from './Shimmer'
 const RestaurantMenu = () => {
     const {resId} = useParams();
     const resMenu = useRestaurantMenu(resId); //useRestaurantMenu is the custom hook here
-    const [showIndex,setShowIndex]= useState(0)
+    const [showIndex,setShowIndex]= useState(null)
     // ------------------------------this line was throwing error-----------
 
     // const {itemCards}= resMenu?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card;
@@ -25,14 +25,13 @@ const RestaurantMenu = () => {
     console.log(categories,"filtered category")
     return (resMenu==='')?<Shimmer /> : (
     <div>
-        
-        <p className='text-3xl font-bold text-center'>{resMenu.cards[2].card.card.info.name}</p>
-        <p className='text-xl my-3 font-bold text-center'>{resMenu.cards[2].card.card.info.cuisines.join(', ')}</p>
+        <p className='text-3xl font-bold text-center'>{resMenu?.cards[2]?.card?.card?.info?.name}</p>
+        <p className='text-xl my-3 font-bold text-center'>{resMenu?.cards[2]?.card?.card?.info?.cuisines.join(', ')}</p>
         {/* Categories accordians */}
-        {categories.map((category,index)=>(
+        {categories?.map((category,index)=>(
           <RestaurantCategory data={category.card.card} 
           showItems={index===showIndex && true}
-          setShowIndex={()=>setShowIndex(index)}
+          setShowIndex={()=> index===showIndex?setShowIndex(null): setShowIndex(index)}
           />
           
         ) )}
